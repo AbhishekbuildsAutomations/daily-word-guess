@@ -1,0 +1,14 @@
+{
+  "name": "daily-word-guess",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A daily word-guessing game with a leaderboard, on Cloudflare Workers + D1.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler d1 migrations apply daily-word-guess --local && wrangler dev",
+    "deploy": "wrangler d1 migrations apply daily-word-guess --remote && wrangler deploy",
+    "test": "node --test"
+  },
+  "devDependencies": { "wrangler": "^4.0.0" }
+}

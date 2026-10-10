@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Word Guess</title>
+<meta name="description" content="Guess the hidden 4 to 7-letter word. A new word every day with a leaderboard, plus unlimited practice.">
+<link rel="stylesheet" href="/style.css">
+<script type="module" src="/game.js"></script>
+</head>
+<body>
+<main>
+  <h1>Daily Word Guess</h1>
+  <div class="bar">
+    <div class="seg" role="group" aria-label="Word length" id="lens"></div>
+    <div class="seg"><button type="button" id="daily" aria-pressed="true">Today</button><button type="button" id="practice" aria-pressed="false">Practice</button></div>
+  </div>
+  <p id="mode" class="muted"></p>
+  <div id="board" class="board" role="grid" aria-label="Your guesses"></div>
+  <p id="msg" class="msg" aria-live="polite">&nbsp;</p>
+  <div id="keys" class="keys" aria-label="Keyboard"></div>
+
+  <section id="lb" class="lb" hidden>
+    <h2>Today's leaderboard</h2>
+    <form id="save" hidden><label>Your name <input id="name" maxlength="20" autocomplete="nickname" required></label> <button>Save score</button></form>
+    <p id="lbmsg" class="muted"></p>
+    <ol id="top"></ol>
+  </section>
+
+  <details class="how">
+    <summary>How to play</summary>
+    <p>Type a real word and press Enter. A <b class="k g">teal</b> tile is the right letter in the right spot, an <b class="k y">amber</b> tile is in the word somewhere else, and a <b class="k b">grey</b> tile is not in the word. A repeated letter is only marked as many times as the answer has it.</p>
+    <p>4 and 5-letter words get 6 tries; 6 and 7-letter words get 7. Everyone gets the same daily word for their date. Fewest guesses wins the leaderboard, and time breaks ties.</p>
+  </details>
+</main>
+<footer>Open source (MIT) · <a href="https://github.com/AbhishekbuildsAutomations/daily-word-guess">GitHub</a> · The full game runs on <a href="https://wordsunscrambler.site/games/word-guess-unlimited/">WordsUnscrambler</a></footer>
+</body>
+</html>

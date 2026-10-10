@@ -1,0 +1,11 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "daily-word-guess",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-06",
+  "assets": { "directory": "./public", "binding": "ASSETS" },
+  "d1_databases": [
+    // Create yours with `npx wrangler d1 create daily-word-guess` and paste its id here.
+    { "binding": "SCORES", "database_name": "daily-word-guess", "database_id": "REPLACE_WITH_YOUR_D1_ID", "migrations_dir": "migrations" }
+  ]
+}
